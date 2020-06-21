@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>{{ .title }}</title>
+
+		<link rel="preconnect" href="https://cdn.cjr.is" crossorigin>
+		<link rel="dns-prefetch" href="https://cdn.cjr.is">
+
+		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-regular-subset.woff2?sha=3114f1256' type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-regular-subset.woff?sha=3114f1256' type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-bold-subset.woff2?sha=3114f1256' type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-bold-subset.woff?sha=3114f1256' type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-italic-subset.woff2?sha=3114f1256' type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-italic-webfont.woff?sha=3114f1256' type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff2?sha=3114f1256' type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff?sha=3114f1256' type="font/woff" crossorigin="anonymous">
+
+<!-- 		<link rel="stylesheet" href="https://cdn.cjr.is/stylesheet.css?v={{ .cachebreaker }}" media="preloading" onload="this.media='all'">
+		<noscript><link rel="stylesheet" href="https://cdn.cjr.is/stylesheet.css?v={{ .cachebreaker }}"></noscript> -->
+		<link rel="stylesheet" href="https://cdn.cjr.is/stylesheet.css?v={{ .cachebreaker }}">
+		<link rel="icon" href="https://cdn.cjr.is/favicon.ico?v={{ .cachebreaker }}">
+
+		{{ with .description }}<meta name="description" content="{{ . }}"/>{{ end }}
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@cnnrro" />
+		<meta name="twitter:creator" content="@cnnrro" />
+		<meta property="og:url" content="https://cjr.is/" />
+		<meta property="og:title" content="About - CJR" />
+		{{ with .description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+		<!-- <meta property="og:image" content="" /> -->
+		<!-- <meta property="og:image:alt" content="" /> -->
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="top-decoration"></div>
+
+			<header>
+				<p class="h1">CJR</p><p class="subheading">Screenwriting, and miscellanea<span class="secret">&nbsp;&hearts;&nbsp;</span></p>
+			</header>
+
+			<nav>
+				<ul>
+					<li {{if eq .permalink "https://www.cjr.is/"}}class="active-page"{{end}}><a href="/">about</a></li>
+					<li {{if eq .permalink "https://www.cjr.is/contact/"}}class="active-page"{{end}}><a href="/contact/">contact</a></li>
+					<!-- <li><a href="#footer-nav">more...</a></li> -->
+				</ul>
+			</nav>
+			<!-- <li><a class="err" href="/script-reading">script reading</a></li> -->
+
+			<main>

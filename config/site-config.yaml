@@ -1,0 +1,7 @@
+# Where you can set all the default values available to every page (overwriteable by other pages)
+
+title:
+description:
+template: "main.html" # default
+baseurl: "https://www.cjr.is/"
+cachebreaker: "2020-06-20"

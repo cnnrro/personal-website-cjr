@@ -1,0 +1,9 @@
+/* TEAM */
+Your title: Connor John Robbins
+Site: https://www.cjr.is
+Email: hello@cjr.is
+Twitter: @cnnrro
+Location: Toronto, Canada
+
+/* THANKS */
+Thanks for stopping by! If you've come this far definitely send me an email, even if it's just to say hello.

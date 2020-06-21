@@ -1,0 +1,3 @@
+.build/
+.direnv/
+_public/*

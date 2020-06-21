@@ -1,0 +1,608 @@
+@font-face {
+  font-family: 'Hack';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-regular-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-regular-subset.woff?sha=3114f1256') format('woff');
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-bold-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-bold-subset.woff?sha=3114f1256') format('woff');
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-italic-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-italic-webfont.woff?sha=3114f1256') format('woff');
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff?sha=3114f1256') format('woff');
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body div {
+	/*overflow: hidden;*/
+}
+
+body {
+	background-color: #fcfafa;
+	/*background-color: #fff;*/
+	/*background-color: #000;*/
+	/*font-family: "monospace";*/
+	font-family: Hack, monospace;
+/*	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 15px;*/
+}
+
+.container {
+	min-height: 100%;
+	/*overflow: hidden;*/
+	background-color: #fff;
+	color: #110e0f;
+
+	max-width: 40rem;
+	margin-top: 1.1rem;
+	margin: 0 auto;
+	padding: 0rem 1.1rem 0rem 1.1rem;
+
+	border-left: 0.8rem solid #eee;
+
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+footer {
+	flex-shrink: 0;
+}
+
+
+.top-decoration {
+	max-width: 43rem;
+	margin: 0 auto;
+	height: 0.3rem;
+	background-color: #f00;
+	margin: 0 -1.1rem 0 -1.9rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6, p, li, a {
+	font-size: 1.1rem;
+	/*line-height: 1.5rem;*/
+	margin: 1rem 0;
+	/*position: relative;*/
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+	margin: 2rem 0 1rem 0;
+	font-weight: 700;
+	/*border-bottom: 0.05rem solid #eee;*/
+	border-bottom: 0.05rem solid #f99;
+}
+
+.h1, h1 {
+	margin-top: 1rem;
+}
+
+/*ul, ol {
+	margin-top: 2.2rem;
+	margin-bottom: 2.2rem;
+}*/
+
+ul ul, ul ol, ol ol, ol ul {
+	margin-top: 1.1rem;
+	margin-bottom: 1.1rem;
+}
+
+/*li {
+	font-size: 1.1rem;
+}*/
+
+a {
+	/*color: #f00;*/
+	color: #0529ff;
+	text-decoration: underline;
+	/*font-weight: bold;*/
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+p a:hover {
+	font-style: italic;
+}
+
+p {
+	word-break: normal;
+	hyphens: auto;
+}
+
+::selection {
+	background: #ff0;
+	/*background: #FFC4EA;*/
+}
+
+::-moz-selection {
+	background: #ff0;
+	/*background: #FFC4EA;*/
+}
+
+hr {
+	margin: 2.2rem 0;
+	position: relative;
+	border: none;
+	border-top: 1px solid #f00;
+	color: #f00;
+	text-align: center;
+}
+
+hr:after {
+	content: "\2009/-/\2009";
+	background: #fff;
+	position: absolute;
+	top: -0.7rem;
+	margin-left: -1rem;
+}
+
+s {
+	text-decoration-color: #f00;
+}
+
+
+/*blockquote {
+	position: relative;
+	margin: 1.1rem 2ch;
+}*/
+
+/*blockquote:before {
+	position: absolute;
+	content: "\00a0";
+	background: #f00;
+	height: 100%;
+}*/
+
+blockquote {
+	padding-left: 1ch;
+	margin-left: 0ch;
+	border-left: #f00 1ch solid;
+}
+
+blockquote .quote-author {
+	text-align: right;
+}
+
+/*blockquote:before {
+	content: ">";
+	float: left;
+}*/
+
+main h1:after, main h2:after, main h3:after, main h4:after, main h5:after, main h6:after {
+	content: "\00a0\00a0";
+}
+
+main h1:hover a:after, main h2:hover a:after, main h3:hover a:after, main h4:hover a:after, main h5:hover a:after, main h6:hover a:after {
+	/* content: "\00a0\1f517"; */
+	content: "\00a0\00a7";
+	color: #aaa;
+	/*color: #000;*/
+}
+
+h1 a, main h2 a, main h3 a, main h4 a, main h5 a, main h6 a {
+	color: #000;
+	text-decoration: none;
+}
+
+
+/*main h1:after, main h2:after, main h3:after, main h4:after, main h5:after, main h6:after {
+	content: "";
+	position: absolute;
+	background: black;
+	width: 100%;
+	height: 1.1rem;
+	margin-left: 1.1rem;
+}*/
+
+h1:before {
+	content: "#\00a0";
+}
+
+h2:before {
+	content: "##\00a0";
+}
+
+p:before {
+	/*content: "\00a0\00a0\00a0\00a0";*/
+	content: "\00a0\00a0";
+}
+
+header .h1:before {
+	content: '>\00a0';
+}
+
+header .h1 {
+	display: inline-block;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+	border: none;
+}
+
+header p.subheading:before {
+	content: "\00a0-\00a0"
+}
+
+header p.subheading {
+	margin: 0;
+	hyphens: none;
+}
+
+header p {
+	display: inline-block;
+}
+
+header p.right {
+	float: right;
+}
+
+span.secret {
+/*	display: inline-block;*/
+	font-style: normal;
+	color: #fff;
+}
+
+span.secret:before {
+	content: "";
+}
+
+span.secret::selection {
+	background: #FFC4EA;
+}
+
+span.secret::-moz-selection {
+	background: #FFC4EA;
+}
+
+/*div.container > nav ul:before {
+	content: ">>>\00a0";
+	display: inline-block;
+	color: #f00;
+	font-weight: bold;
+}*/
+
+div.container > nav {
+	display: inline-block;
+	margin-left: -1rem;
+}
+
+/*div.container > nav ul:after {
+	content: "\00a0<<<";
+	display: inline-block;
+	color: #f00;
+	font-weight: bold;
+}*/
+
+/*div.container > nav ul:before {
+	content: " \00a0";
+}*/
+
+div.container > nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+div.container > nav ul li {
+	margin: 0;
+
+	display: inline-block;
+	list-style-type: none;
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+
+div.container > nav ul li:not(:last-child):after {
+	color: #ccc;
+	/*content: "\00a0/\00a0";*/
+	content: "/";
+}
+
+div.container > nav ul li:hover a {
+	color: #000;
+	font-weight: bold;
+}
+
+div.container > nav ul li.active-page a {
+	color: #dc1930;
+	font-weight: bold;
+}
+
+div.container > nav ul li a {
+	color: #666;
+	text-decoration: none;
+	margin: 0;
+	display: inline-block;
+	padding: 1rem;
+}
+
+
+main {
+	/*flex: 1;*/
+	/*min-height: 100%;*/
+}
+
+.signature {
+	/*background: #f00;*/
+	background: #dc1930;
+	color: #fff;
+	padding: 0.2rem;
+	display: inline-block;
+	padding-left: 0.7rem;
+	padding-right: 1rem;
+	margin-left: 1.3rem;
+}
+
+.signature::before {
+	content: none;
+}
+
+/* .signature::after { */
+/* 	content: "\00a0\00a0"; */
+/* } */
+
+.gumroad-resize {
+	max-width: 25rem;
+	margin: 0 auto;
+}
+
+footer {
+/*	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;*/
+	/*background: #eee;*/
+	/*color: #fff;*/
+	/* color: #666; */
+	border-top: 0.05rem solid #eee;
+	/*padding: 0.7rem 1.1rem;*/
+	margin: 1.2rem -1.1rem 0rem -1.1rem;
+	background: #eee;
+	/*overflow: hidden;*/
+	/*position: relative;*/
+	/*display: grid;*/
+}
+
+/*footer:before {
+	content: "";
+	background: #eee;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 9999px;
+	right: 100%;
+}
+
+footer:after {
+	content: "";
+	background: #eee;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 9999px;
+	left: 100%;
+}*/
+
+
+/*footer a {
+	padding: 0 1.1rem;
+	color: #110e0f;
+	text-decoration: none;
+}*/
+
+
+footer p {
+	font-size: 0.7rem;
+	margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+footer > nav {
+	/* display: inline-block; */
+	/* max-width: 30rem; */
+	/* margin: 0 auto; */
+	padding: 0.3rem 0;
+}
+
+footer > nav ul {
+	display: flex;
+	flex-flow: row wrap;
+	/* justify-content: space-between; */
+	justify-content: flex-start;
+	align-content: space-between;
+	/* margin-top: 0; */
+	/* padding: 0 0 0 0; */
+	font-size: 0.6rem;
+	width: 85%;
+	margin: 0 auto;
+	/* margin: 0; */
+	/* padding: 0; */
+	/* display: flex; */
+	/* max-width: 30rem; */
+	/* align-items: center; */
+}
+
+/* footer > nav ul::before, footer > nav ul::after { */
+/*   content: ""; */
+/*   flex-basis: 100%; */
+/*   width: 0; */
+/*   order: 2; */
+/* } */
+
+footer > nav ul li {
+	text-align: center;
+	/* text-align: right; */
+	margin: 0.2rem 0;
+	width: 32%;
+	/* margin: 0; */
+	/* padding: 0 1rem; */
+	/* flex: auto; */
+	/* flex-shrink: 0; */
+
+	display: inline-block;
+	list-style-type: none;
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+footer > nav ul li:hover a {
+	color: #000;
+	/* font-weight: bold; */
+}
+
+footer > nav ul li a {
+	font-size: 0.9rem;
+	color: #4a4547;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.3rem;
+	margin: 0.2rem;
+}
+
+
+
+
+
+
+.end-block {
+	margin: 0;
+	margin-right: 0.8rem;
+	border-top: 0.05rem solid #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+
+.copyright {
+	display: inline-block;
+	margin: 0;
+	flex-grow: 1;
+	margin-left: 0.7rem;
+}
+
+.copyright::before {
+	content: none;
+}
+
+ul.social {
+	margin: 0;
+	padding: 0;
+	margin-right: 0.2rem;
+}
+
+ul.social li {
+	margin: 0;
+	display: inline-block;
+}
+
+ul.social li a {
+	margin: 0;
+	padding: 0.7rem 0.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social svg {
+	width: auto;
+	height: 1.2rem;
+	fill: #555;
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.icon-soundcloud:hover svg { fill: #ff8800; }
+
+.icon-twitter:hover svg { fill: #1da1f2; }
+
+.icon-instagram:hover svg { fill: #e1306c; }
+
+
+
+
+
+
+
+
+
+.err {
+	display: inline-block;
+	position: relative;
+}
+.err:before {
+	content: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+	font-weight: normal;
+	color: #f66;
+	width: 100%;
+	position: absolute;
+	top: 0.8rem;
+	overflow: hidden;
+}
+
+
+
+
+@media screen and (max-width: 38rem) {
+	html {
+		font-size: 90%;
+	}
+}
+
+
+@media screen and (max-width: 30rem) {
+	footer > nav ul li {
+		width: 48%;
+	}
+}

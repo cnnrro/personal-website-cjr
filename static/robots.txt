@@ -1,0 +1,4 @@
+Sitemap: https://cjr.is/sitemap.xml
+
+User-agent: *
+Disallow:
