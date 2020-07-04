@@ -146,11 +146,13 @@ p {
 
 ::selection {
 	background: #ff0;
+	color: #000;
 	/*background: #FFC4EA;*/
 }
 
 ::-moz-selection {
 	background: #ff0;
+	color: #000;
 	/*background: #FFC4EA;*/
 }
 
@@ -281,11 +283,13 @@ span.secret:before {
 }
 
 span.secret::selection {
-	background: #FFC4EA;
+	color: #FFC4EA;
+	background: none;
 }
 
 span.secret::-moz-selection {
-	background: #FFC4EA;
+	color: #FFC4EA;
+	background: none;
 }
 
 /*div.container > nav ul:before {
@@ -541,6 +545,7 @@ ul.social {
 ul.social li {
 	margin: 0;
 	display: inline-block;
+	min-width: 2.5rem;
 }
 
 ul.social li a {
