@@ -1,0 +1,214 @@
+connor@desktop> gpg2 --expert --full-gen-key
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (7) DSA (set your own capabilities)
+   (8) RSA (set your own capabilities)
+   (9) ECC and ECC
+  (10) ECC (sign only)
+  (11) ECC (set your own capabilities)
+  (13) Existing key
+  (14) Existing key from card
+Your selection? 8
+
+Possible actions for a RSA key: Sign Certify Encrypt Authenticate
+Current allowed actions: Sign Certify Encrypt
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? s
+
+Possible actions for a RSA key: Sign Certify Encrypt Authenticate
+Current allowed actions: Certify Encrypt
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? e
+
+Possible actions for a RSA key: Sign Certify Encrypt Authenticate
+Current allowed actions: Certify
+
+   (S) Toggle the sign capability
+   (E) Toggle the encrypt capability
+   (A) Toggle the authenticate capability
+   (Q) Finished
+
+Your selection? q
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Thu 08 Jul 2021 10:22:59 PM EDT
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Connor Robbins
+Email address: hello@cjr.is
+Comment:
+You selected this USER-ID:
+    "Connor Robbins <hello@cjr.is>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key 0xD64A760E17C91F34 marked as ultimately trusted
+gpg: revocation certificate stored as '/home/connor/.gnupg/openpgp-revocs.d/9F4B387A3498DB104301E290D64A760E17C91F34.rev'
+public and secret key created and signed.
+
+pub   rsa4096/0xD64A760E17C91F34 2020-07-09 [C] [expires: 2021-07-09]
+      Key fingerprint = 9F4B 387A 3498 DB10 4301  E290 D64A 760E 17C9 1F34
+uid                              Connor Robbins <hello@cjr.is>
+
+connor@desktop> gpg2 --edit-key 'hello@cjr.is'
+Secret key is available.
+
+sec  rsa4096/0xD64A760E17C91F34
+     created: 2020-07-09  expires: 2021-07-09  usage: C
+     trust: ultimate      validity: ultimate
+[ultimate] (1). Connor Robbins <hello@cjr.is>
+
+gpg> addkey
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+  (14) Existing key from card
+Your selection? 4
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 2048
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Thu 08 Jul 2021 10:25:06 PM EDT
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+sec  rsa4096/0xD64A760E17C91F34
+     created: 2020-07-09  expires: 2021-07-09  usage: C
+     trust: ultimate      validity: ultimate
+ssb  rsa2048/0x264FC752A9668141
+     created: 2020-07-09  expires: 2021-07-09  usage: S
+[ultimate] (1). Connor Robbins <hello@cjr.is>
+
+gpg> addkey
+Please select what kind of key you want:
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (5) Elgamal (encrypt only)
+   (6) RSA (encrypt only)
+  (14) Existing key from card
+Your selection? 6
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 2048
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Thu 08 Jul 2021 10:25:30 PM EDT
+Is this correct? (y/N) y
+Really create? (y/N) y
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+sec  rsa4096/0xD64A760E17C91F34
+     created: 2020-07-09  expires: 2021-07-09  usage: C
+     trust: ultimate      validity: ultimate
+ssb  rsa2048/0x264FC752A9668141
+     created: 2020-07-09  expires: 2021-07-09  usage: S
+ssb  rsa2048/0xCD8CFCB590E2491E
+     created: 2020-07-09  expires: 2021-07-09  usage: E
+[ultimate] (1). Connor Robbins <hello@cjr.is>
+
+gpg> save
+connor@desktop> gpg2 --list-secret-keys
+/home/connor/.gnupg/pubring.kbx
+-------------------------------
+sec   rsa4096/0xD64A760E17C91F34 2020-07-09 [C] [expires: 2021-07-09]
+      Key fingerprint = 9F4B 387A 3498 DB10 4301  E290 D64A 760E 17C9 1F34
+uid                   [ultimate] Connor Robbins <hello@cjr.is>
+ssb   rsa2048/0x264FC752A9668141 2020-07-09 [S] [expires: 2021-07-09]
+ssb   rsa2048/0xCD8CFCB590E2491E 2020-07-09 [E] [expires: 2021-07-09]
+
+connor@desktop> gpg2 --output revoke.asc --gen-revoke 'hello@cjr.is'
+
+sec  rsa4096/0xD64A760E17C91F34 2020-07-09 Connor Robbins <hello@cjr.is>
+
+Create a revocation certificate for this key? (y/N) y
+Please select the reason for the revocation:
+  0 = No reason specified
+  1 = Key has been compromised
+  2 = Key is superseded
+  3 = Key is no longer used
+  Q = Cancel
+(Probably you want to select 1 here)
+Your decision? 1
+Enter an optional description; end it with an empty line:
+> 
+Reason for revocation: Key has been compromised
+(No description given)
+Is this okay? (y/N) y
+ASCII armored output forced.
+Revocation certificate created.
+
+Please move it to a medium which you can hide away; if Mallory gets
+access to this certificate he can use it to make your key unusable.
+It is smart to print this certificate and store it away, just in case
+your media become unreadable.  But have some caution:  The print system of
+your machine might store the data and make it available to others!
+connor@desktop> gpg2 --armor --export 'hello@cjr.is' > pubkey.asc
+connor@desktop> gpg2 --armor --export-secret-keys 'hello@cjr.is' > privkey.asc
+
+
+
+
+# Optional: Remove the masterkey from your computer.
+connor@desktop> gpg2 --armor --export-secret-subkeys 'hello@cjr.is' > privsubkeys.asc
+connor@desktop> gpg2 --delete-secret-keys 'hello@cjr.is'
+Delete this key from the keyring? (y/N) y
+This is a secret key! - really delete? (y/N) y
+connor@desktop> gpg2 --import privsubkeys.asc
+connor@desktop> gpg2 --list-secret-keys
+connor@desktop> rm privsubkeys.asc
+connor@desktop> mv privkey.asc /mnt/secure_usb
+
+
+
+connor@desktop> gpg2 --keyserver hkp://hkps.pool.sks-keyservers.net --send-key '9F4B 387A 3498 DB10 4301  E290 D64A 760E 17C9 1F34'
+gpg2 --keyserver hkp://hkps.pool.sks-keyservers.net --search-keys 'hello@cjr.is'                                                                          ~
+gpg: data source: http://[2001:67c:26b4:ff00::140]:11371
+(1)     Connor Robbins <hello@cjr.is>
+          4096 bit RSA key 0xD64A760E17C91F34, created: 2020-07-09, expires: 2021-07-09
+Keys 1-1 of 1 for "hello@cjr.is".  Enter number(s), N)ext, or Q)uit >

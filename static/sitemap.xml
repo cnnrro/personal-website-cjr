@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.cjr.is/</loc></url>
-<url><loc>https://www.cjr.is/contact/</loc></url>
-<url><loc>https://www.cjr.is/links/</loc></url>
+	<url><loc>https://www.cjr.is/</loc></url>
+	<url><loc>https://www.cjr.is/script-editing/</loc></url>
+	<url><loc>https://www.cjr.is/posts/</loc></url>
+	<url><loc>https://www.cjr.is/posts/the-church-across-the-street/</loc></url>
+	<url><loc>https://www.cjr.is/posts/static-site-search/</loc></url>
+	<url><loc>https://www.cjr.is/links/</loc></url>
+	<url><loc>https://www.cjr.is/contact/</loc></url>
+	<url><loc>https://www.cjr.is/search/</loc></url>
 </urlset>
