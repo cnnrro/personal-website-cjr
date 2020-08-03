@@ -72,11 +72,14 @@ clean:
 # 3. read the front matter from the page and override any site-config defaults
 # 4. pandoc the page to retrieve html content, overwrite the pages yaml with this html content
 
+# NOTE:
+# `pandoc -f markdown-smart` disables smart quotes and dashes (format: markdown, extension: -smart (to remove the smart typography extension))
+
 $(yaml): .build/yaml/%.yaml: pages/%.markdown config/site-config.yaml config/filters.lua
 	mkdir -p $(dir $@)
 	yq read config/site-config.yaml > $@
 	sed '/\.\.\./q' $< | yq read - | yq merge --inplace --overwrite $@ -
-	yq new 'content' "`pandoc -f markdown-smart --wrap=none --lua-filter config/filters.lua $<`" | yq merge --inplace --overwrite $@ -
+	yq new 'content' "`pandoc -f markdown --wrap=none --lua-filter config/filters.lua $<`" | yq merge --inplace --overwrite $@ -
 	yq new 'permalink' "`yq read $@ 'baseurl'``echo '$<' | sed -e 's/^pages\///g' -e 's/index.markdown$$//g' -e 's/.markdown$$/\//g'`" | yq merge --inplace --overwrite $@ -
 
 # Generate list pages yaml that is dependant on all the yaml within subfolders
