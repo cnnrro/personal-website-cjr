@@ -1,0 +1,17 @@
+{{ template "partials/header.html" . }}
+
+{{ if ne .title "" }}
+<h1 id="{{ .title | strings.Slug }}"><a href="#{{ .title | strings.Slug }}">{{ .title }}</a></h1>
+{{ end }}
+
+{{ .content }}
+
+<ul>
+{{ range (.pages | coll.Sort "date" | reverse) }}
+	<li>{{ (.date | time.Parse "2006-01-02T15:04:05Z").Format "2006-01-02" }} - <a href="{{ .permalink }}">{{ .title }}</a>
+		{{ range .tags }}<span class="tag tag-{{ . }}">{{ . }}</span>{{ end }}
+	</li>
+{{ end }}
+</ul>
+
+{{ template "partials/footer.html" . }}

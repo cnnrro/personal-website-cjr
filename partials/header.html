@@ -4,11 +4,49 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>{{ .title }}</title>
+		<title>{{ .meta_title }}</title>
 
 		<link rel="preconnect" href="https://cdn.cjr.is" crossorigin>
 		<link rel="dns-prefetch" href="https://cdn.cjr.is">
 
+		<link rel="preconnect" href="https://analytics.cjr.is" crossorigin>
+		<link rel="dns-prefetch" href="https://analytics.cjr.is">
+
+		<link rel="stylesheet" href="https://cdn.cjr.is/stylesheet.css?v={{ .cachebreaker }}">
+		<link rel="icon" href="https://cdn.cjr.is/favicon.ico?v={{ .cachebreaker }}">
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">  -->
+
+		{{ with .description }}<meta name="description" content="{{ . }}"/>{{ end }}
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@cnnrro" />
+		<meta name="twitter:creator" content="@cnnrro" />
+		<meta property="og:url" content="{{ .permalink }}" />
+		<meta property="og:title" content="{{ .meta_title }}" />
+		{{ with .description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+		{{ with .og_image }}<meta property="og:image" content="{{ . }}" />{{ end }}
+		{{ with .og_image_alt }}<meta property="og:image:alt" content="{{ . }}" />{{ end }}
+
+		<link rel=“canonical” href=“{{ .permalink }}”>
+
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Regular.ttf" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Regular.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Bold.ttf" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Bold.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Bold.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Italic.ttf" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Italic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-Italic.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-BoldItalic.ttf" type="font/ttf" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-BoldItalic.woff" type="font/woff" crossorigin="anonymous">
+		<link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-BoldItalic.woff2" type="font/woff2" crossorigin="anonymous">
+		<!-- <link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-SemiBold.ttf" type="font/ttf" crossorigin="anonymous"> -->
+		<!-- <link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-SemiBold.woff" type="font/woff" crossorigin="anonymous"> -->
+		<!-- <link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-SemiBold.woff2" type="font/woff2" crossorigin="anonymous"> -->
+		<!-- <link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-SemiBoldItalic.ttf" type="font/ttf" crossorigin="anonymous"> -->
+		<!-- <link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-SemiBoldItalic.woff" type="font/woff" crossorigin="anonymous"> -->
+		<!-- <link rel="preload" as="Crimson" href="https://cdn.cjr.is/fonts/CrimsonText-SemiBoldItalic.woff2" type="font/woff2" crossorigin="anonymous"> -->
 		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-regular-subset.woff2?sha=3114f1256' type="font/woff2" crossorigin="anonymous">
 		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-regular-subset.woff?sha=3114f1256' type="font/woff" crossorigin="anonymous">
 		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-bold-subset.woff2?sha=3114f1256' type="font/woff2" crossorigin="anonymous">
@@ -18,38 +56,45 @@
 		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff2?sha=3114f1256' type="font/woff2" crossorigin="anonymous">
 		<link rel="preload" as="Hack" href='https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff?sha=3114f1256' type="font/woff" crossorigin="anonymous">
 
-<!-- 		<link rel="stylesheet" href="https://cdn.cjr.is/stylesheet.css?v={{ .cachebreaker }}" media="preloading" onload="this.media='all'">
-		<noscript><link rel="stylesheet" href="https://cdn.cjr.is/stylesheet.css?v={{ .cachebreaker }}"></noscript> -->
-		<link rel="stylesheet" href="https://cdn.cjr.is/stylesheet.css?v={{ .cachebreaker }}">
-		<link rel="icon" href="https://cdn.cjr.is/favicon.ico?v={{ .cachebreaker }}">
+		{{ with .code }}
+		<link rel="stylesheet" media="none" onload="this.media='all'" href="https://cdn.cjr.is/plugins/highlightjs/default.css">
+		<script defer src="https://cdn.cjr.is/plugins/highlightjs/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+		{{ end }}
 
-		{{ with .description }}<meta name="description" content="{{ . }}"/>{{ end }}
+		{{ with .math }}
+		<link rel="stylesheet" media="none" onload="this.media='all'" href="https://cdn.cjr.is/plugins/katex/katex.css" crossorigin="anonymous">
+		<script defer src="https://cdn.cjr.is/plugins/katex/katex.js" crossorigin="anonymous"></script>
+		<script defer src="https://cdn.cjr.is/plugins/katex/contrib/auto-render.js" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+		{{ end }}
 
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@cnnrro" />
-		<meta name="twitter:creator" content="@cnnrro" />
-		<meta property="og:url" content="https://cjr.is/" />
-		<meta property="og:title" content="About - CJR" />
-		{{ with .description }}<meta property="og:description" content="{{ . }}" />{{ end }}
-		<!-- <meta property="og:image" content="" /> -->
-		<!-- <meta property="og:image:alt" content="" /> -->
+		<!-- Matomo -->
+		<script type="text/javascript">
+			var _paq = window._paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//analytics.cjr.is/";
+				_paq.push(['setTrackerUrl', u+'matomo.php']);
+				_paq.push(['setSiteId', '1']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<noscript><p><img src="//analytics.cjr.is/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+		<!-- End Matomo Code -->
 	</head>
-
 	<body>
-		<div class="container">
-			<div class="top-decoration"></div>
-
-			<header>
-				<p class="h1">CJR</p><p class="subheading">Screenwriting, and miscellanea<span class="secret">&nbsp;&hearts;&nbsp;</span></p>
-			</header>
-
+		<header>
+			<p>CJR - Screenwriting, and miscellanea</p><!--<span class="secret" aria-hidden="true">&nbsp;&hearts;&nbsp;</span>-->
 			<nav>
 				<ul>
 					<li {{if eq .permalink "https://www.cjr.is/"}}class="active-page"{{end}}><a href="/">about</a></li>
+					<li {{if (.permalink | strings.HasPrefix "https://www.cjr.is/posts/") }}class="active-page"{{end}}><a href="/posts/">posts</a></li>
+					<li {{if eq .permalink "https://www.cjr.is/script-editing/"}}class="active-page"{{end}}><a href="/script-editing/">{{if eq .permalink "https://www.cjr.is/script-editing/"}}script editing{{else}}*script editing*{{end}}</a></li>
 					<li {{if eq .permalink "https://www.cjr.is/contact/"}}class="active-page"{{end}}><a href="/contact/">contact</a></li>
-					<!-- <li><a href="#footer-nav">more...</a></li> -->
+					<li {{if eq .permalink "https://www.cjr.is/search/"}}class="active-page"{{end}}><a href="/search/">search</a></li>
 				</ul>
 			</nav>
-			<!-- <li><a class="err" href="/script-reading">script reading</a></li> -->
-
-			<main>
+		</header>
+		<main{{ with .types }} class="{{ range . }} {{ . }}{{ end }}"{{ end }}>

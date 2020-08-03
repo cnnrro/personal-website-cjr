@@ -1,613 +1,683 @@
-@font-face {
-  font-family: 'Hack';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-regular-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-regular-subset.woff?sha=3114f1256') format('woff');
+* {	margin: 0; padding: 0; }
+
+address,
+area,
+article,
+aside,
+audio,
+blockquote,
+datalist,
+details,
+dl,
+fieldset,
+figure,
+form,
+input,
+iframe,
+img,
+meter,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+progress,
+ruby,
+section,
+table,
+textarea,
+ul,
+video {
+	/* Margins for most elements */
+	margin-bottom: 1rem;
 }
 
-@font-face {
-  font-family: 'Hack';
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-bold-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-bold-subset.woff?sha=3114f1256') format('woff');
-}
+html { font-size: 100%; height: 100%; }
 
-@font-face {
-  font-family: 'Hack';
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-italic-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-italic-webfont.woff?sha=3114f1256') format('woff');
-}
-
-@font-face {
-  font-family: 'Hack';
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff?sha=3114f1256') format('woff');
-}
-
-html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-}
-
-body div {
-	/*overflow: hidden;*/
+html,input,select,button {
+	/* Set body font family and some finicky elements */
+	font-family: 'Crimson', Georgia, Times, “Times New Roman”, serif;
+	/*font-family: Georgia, Times, “Times New Roman”, serif;*/
 }
 
 body {
-	background-color: #fcfafa;
-	/*background-color: #fff;*/
-	/*background-color: #000;*/
-	/*font-family: "monospace";*/
-	font-family: Hack, monospace;
-/*	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight: 300;
-	font-size: 15px;*/
-}
-
-.container {
-	min-height: 100%;
-	/*overflow: hidden;*/
-	background-color: #fff;
-	color: #110e0f;
-
-	max-width: 40rem;
-	margin-top: 1.1rem;
+	/* Center body in page */
 	margin: 0 auto;
-	padding: 0rem 1.1rem 0rem 1.1rem;
+	max-width: 46rem;
+	padding: 1.4rem 2rem 0rem 2rem;
+	overflow-x: hidden;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	background: #fff;
 
-	border-left: 0.8rem solid #eee;
+	/* Main body text */
+	color: #222;
+	font-size: 1.5rem;
+	line-height: 1.3;
 
-	display: flex;
+/*	display: flex;
 	flex-direction: column;
+	height: 100%;
+	box-sizing: border-box;*/
 }
 
-main {
+/*main {
 	flex: 1 0 auto;
 }
 
 footer {
 	flex-shrink: 0;
-}
-
-
-.top-decoration {
-	max-width: 43rem;
-	margin: 0 auto;
-	height: 0.3rem;
-	background-color: #f00;
-	margin: 0 -1.1rem 0 -1.9rem;
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6,
-h1, h2, h3, h4, h5, h6, p, li, a {
-	font-size: 1.1rem;
-	/*line-height: 1.5rem;*/
-	margin: 1rem 0;
-	/*position: relative;*/
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6,
-h1, h2, h3, h4, h5, h6 {
-	margin: 2rem 0 1rem 0;
-	font-weight: 700;
-	/*border-bottom: 0.05rem solid #eee;*/
-	border-bottom: 0.05rem solid #f99;
-}
-
-.h1, h1 {
-	margin-top: 1rem;
-}
-
-/*ul, ol {
-	margin-top: 2.2rem;
-	margin-bottom: 2.2rem;
 }*/
-
-ul ul, ul ol, ol ol, ol ul {
-	margin-top: 1.1rem;
-	margin-bottom: 1.1rem;
-}
-
-/*li {
-	font-size: 1.1rem;
-}*/
-
-a {
-	/*color: #f00;*/
-	color: #0529ff;
-	text-decoration: underline;
-	/*font-weight: bold;*/
-}
-
-a:hover {
-	font-weight: bold;
-}
-
-p a:hover {
-	font-style: italic;
-}
-
-p {
-	word-break: normal;
-	hyphens: auto;
-}
 
 ::selection {
 	background: #ff0;
 	color: #000;
-	/*background: #FFC4EA;*/
 }
 
-::-moz-selection {
-	background: #ff0;
-	color: #000;
-	/*background: #FFC4EA;*/
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+	/*padding-top: .875rem;*/
+	margin-top: 2.5rem;
+	font-weight: bold;
 }
-
-hr {
-	margin: 2.2rem 0;
-	position: relative;
-	border: none;
-	border-top: 1px solid #f00;
-	color: #f00;
-	text-align: center;
+h1, h2, h3 {
+	/*padding-bottom: 0.1rem;*/
+	margin-bottom: 1.5rem;
+	/*border-bottom: 1px solid #f5f5f5;*/
 }
-
-hr:after {
-	content: "\2009/-/\2009";
-	background: #fff;
-	position: absolute;
-	top: -0.7rem;
-	margin-left: -1rem;
+h4, h5, h6 {
+	margin-bottom: .3rem;
 }
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.5rem; }
+h6 { font-size: 1.3rem; }
 
-s {
-	text-decoration-color: #f00;
-}
-
-
-/*blockquote {
-	position: relative;
-	margin: 1.1rem 2ch;
-}*/
-
-/*blockquote:before {
-	position: absolute;
-	content: "\00a0";
-	background: #f00;
-	height: 100%;
-}*/
-
-blockquote {
-	padding-left: 1ch;
-	margin-left: 0ch;
-	border-left: #f00 1ch solid;
-}
-
-blockquote .quote-author {
-	text-align: right;
-}
-
-/*blockquote:before {
-	content: ">";
-	float: left;
-}*/
-
-main h1:after, main h2:after, main h3:after, main h4:after, main h5:after, main h6:after {
-	content: "\00a0\00a0";
-}
-
-main h1:hover a:after, main h2:hover a:after, main h3:hover a:after, main h4:hover a:after, main h5:hover a:after, main h6:hover a:after {
-	/* content: "\00a0\1f517"; */
-	content: "\00a0\00a7";
-	color: #aaa;
-	/*color: #000;*/
-}
-
-h1 a, main h2 a, main h3 a, main h4 a, main h5 a, main h6 a {
-	color: #000;
+a {
+	color: #0529ff;
+	/*text-decoration: underline;*/
 	text-decoration: none;
 }
-
-
-/*main h1:after, main h2:after, main h3:after, main h4:after, main h5:after, main h6:after {
-	content: "";
-	position: absolute;
-	background: black;
-	width: 100%;
-	height: 1.1rem;
-	margin-left: 1.1rem;
-}*/
-
-h1:before {
-	content: "#\00a0";
+a:hover, a:focus {
+	color: #001693;
+}
+a:visited {
+	color: #001693;
 }
 
-h2:before {
-	content: "##\00a0";
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+	color: inherit;
+	text-decoration: inherit;
+	display: block;
+}
+h1 > a:after, h2 > a:after, h3 > a:after, h4 > a:after, h5 > a:after, h6 > a:after {
+	content: "\00a0\00a0\00a0";
+}
+h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover,
+h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:focus {
+	color: inherit;
+}
+h1 > a:hover:after, h2 > a:hover:after, h3 > a:hover:after, h4 > a:hover:after, h5 > a:hover:after, h6 > a:hover:after,
+h1 > a:focus:after, h2 > a:focus:after, h3 > a:focus:after, h4 > a:focus:after, h5 > a:focus:after, h6 > a:focus:after {
+	content: "\00a0\00a7";
+	color: #aaa;
+}
+h1 > a:visited, h2 > a:visited, h3 > a:visited, h4 > a:visited, h5 > a:visited, h6 > a:visited {
+	color: inherit;
 }
 
-p:before {
-	/*content: "\00a0\00a0\00a0\00a0";*/
-	content: "\00a0\00a0";
-}
-
-header .h1:before {
-	content: '>\00a0';
-}
-
-header .h1 {
+header > nav > ul { margin: 0; padding: 0; }
+header > nav > ul > li {
 	display: inline-block;
-	margin-top: 1.5rem;
-	margin-bottom: 0;
-	border: none;
-}
-
-header p.subheading:before {
-	content: "\00a0-\00a0"
-}
-
-header p.subheading {
 	margin: 0;
-	hyphens: none;
 }
-
-header p {
+header > nav > ul > li:not(:last-child):after {
+	color: #ccc;
+	/*content: "/";*/
+	content: ","
+}
+header > nav { margin-left: -1rem; }
+header > nav > ul > li > a {
 	display: inline-block;
+	padding: 0.2rem 0 0.2rem 1rem;
+	text-decoration: none;
+	color: #666;
+}
+header > nav > ul > li > a:visited {
+	color: #666;
+}
+header > nav > ul > li > a:hover,
+header > nav > ul > li > a:focus {
+	color: #000;
+}
+header > nav > ul > li.active-page > a {
+	color: #dc1930;
 }
 
-header p.right {
-	float: right;
-}
+header { border-bottom: 0.05rem solid #f5f5f5; }
 
-span.secret {
-/*	display: inline-block;*/
+.secret {
 	font-style: normal;
 	color: #fff;
 }
-
-span.secret:before {
-	content: "";
-}
-
-span.secret::selection {
-	color: #FFC4EA;
-	background: none;
-}
-
-span.secret::-moz-selection {
-	color: #FFC4EA;
-	background: none;
-}
-
-/*div.container > nav ul:before {
-	content: ">>>\00a0";
-	display: inline-block;
-	color: #f00;
-	font-weight: bold;
-}*/
-
-div.container > nav {
-	display: inline-block;
-	margin-left: -1rem;
-}
-
-/*div.container > nav ul:after {
-	content: "\00a0<<<";
-	display: inline-block;
-	color: #f00;
-	font-weight: bold;
-}*/
-
-/*div.container > nav ul:before {
-	content: " \00a0";
-}*/
-
-div.container > nav ul {
-	margin: 0;
-	padding: 0;
-}
-
-div.container > nav ul li {
-	margin: 0;
-
-	display: inline-block;
-	list-style-type: none;
-
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
-}
-
-
-div.container > nav ul li:not(:last-child):after {
-	color: #ccc;
-	/*content: "\00a0/\00a0";*/
-	content: "/";
-}
-
-div.container > nav ul li:hover a {
-	color: #000;
-	font-weight: bold;
-}
-
-div.container > nav ul li.active-page a {
-	color: #dc1930;
-	font-weight: bold;
-}
-
-div.container > nav ul li a {
-	color: #666;
-	text-decoration: none;
-	margin: 0;
-	display: inline-block;
-	padding: 1rem;
-}
-
-
-main {
-	/*flex: 1;*/
-	/*min-height: 100%;*/
-}
-
-.signature {
-	/*background: #f00;*/
-	background: #dc1930;
+.secret::selection {
 	color: #fff;
-	padding: 0.2rem;
-	display: inline-block;
-	padding-left: 0.7rem;
-	padding-right: 1rem;
-	margin-left: 1.3rem;
+	background: #FFC4EA;
 }
 
-.signature::before {
-	content: none;
+main { margin-top: 1.5rem; }
+
+span.tag {
+	margin-left: 0.4rem;
+	background: #f5f5f5;
+	padding: 0rem 0.3rem 0.2rem 0.3rem;
+	font-size: 1.05rem;
+	border-radius: 0.3rem;
 }
 
-/* .signature::after { */
-/* 	content: "\00a0\00a0"; */
-/* } */
-
-.gumroad-resize {
-	max-width: 25rem;
-	margin: 0 auto;
+span.tag-prose {
+	background: #c22e2e;
+	color: #fff;
 }
 
-footer {
-/*	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;*/
-	/*background: #eee;*/
-	/*color: #fff;*/
-	/* color: #666; */
-	border-top: 0.05rem solid #eee;
-	/*padding: 0.7rem 1.1rem;*/
-	margin: 1.2rem -1.1rem 0rem -1.1rem;
-	background: #eee;
-	/*overflow: hidden;*/
-	/*position: relative;*/
-	/*display: grid;*/
+.footnotes {
+	font-size: 1.2rem;
 }
 
-/*footer:before {
-	content: "";
-	background: #eee;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 9999px;
-	right: 100%;
+form.newsletter {
+	border-top: 0.05rem solid #ccc;
+	text-align: center;
+	padding: 1rem 1.5rem 1.5rem 1.5rem;
+	margin: 0;
+}
+form.newsletter > input {
+	/*margin: 0;*/
 }
 
-footer:after {
-	content: "";
-	background: #eee;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 9999px;
-	left: 100%;
-}*/
-
-
-/*footer a {
-	padding: 0 1.1rem;
-	color: #110e0f;
-	text-decoration: none;
-}*/
-
-
-footer p {
-	font-size: 0.7rem;
-	margin-bottom: 0.5rem;
-}
-
-
-
-
-
-
-footer > nav {
-	/* display: inline-block; */
-	/* max-width: 30rem; */
-	/* margin: 0 auto; */
-	padding: 0.3rem 0;
-}
-
-footer > nav ul {
-	display: flex;
-	flex-flow: row wrap;
-	/* justify-content: space-between; */
-	justify-content: flex-start;
-	align-content: space-between;
-	/* margin-top: 0; */
-	/* padding: 0 0 0 0; */
-	font-size: 0.6rem;
+footer { margin: 2rem 0 0.4rem 0; }
+footer > nav { border-top: 0.05rem solid #ccc; }
+footer > nav { margin: 0; }
+footer > nav > ul {
 	width: 85%;
 	margin: 0 auto;
-	/* margin: 0; */
-	/* padding: 0; */
-	/* display: flex; */
-	/* max-width: 30rem; */
-	/* align-items: center; */
+	padding: 0.5rem 0;
+	font-size: 1.3rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: space-between;
 }
-
-/* footer > nav ul::before, footer > nav ul::after { */
-/*   content: ""; */
-/*   flex-basis: 100%; */
-/*   width: 0; */
-/*   order: 2; */
-/* } */
-
-footer > nav ul li {
+footer > nav > ul > li {
+	margin: 0;
 	text-align: center;
-	/* text-align: right; */
-	margin: 0.2rem 0;
 	width: 32%;
-	/* margin: 0; */
-	/* padding: 0 1rem; */
-	/* flex: auto; */
-	/* flex-shrink: 0; */
 
 	display: inline-block;
 	list-style-type: none;
-
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
 }
-
-footer > nav ul li:hover a {
+footer > nav > ul > li > a {
+	color: #666;
+	text-decoration: inherit;
+	display: block;
+	padding: 0.5rem 1rem;
+}
+footer > nav > ul > li > a:visited {
+	color: #666;
+}
+footer > nav > ul > li > a:hover,
+footer > nav > ul > li > a:focus {
 	color: #000;
-	/* font-weight: bold; */
 }
-
-footer > nav ul li a {
-	font-size: 0.9rem;
-	color: #4a4547;
-	text-decoration: none;
-	display: inline-block;
-	padding: 0.3rem;
-	margin: 0.2rem;
-}
-
-
-
-
 
 
 .end-block {
-	margin: 0;
-	margin-right: 0.8rem;
 	border-top: 0.05rem solid #ccc;
 	display: flex;
 	justify-content: center;
 	align-items: center
 }
 
-
 .copyright {
+	margin: 0 0 0 0.7rem;
+	font-size: 1rem;
 	display: inline-block;
-	margin: 0;
 	flex-grow: 1;
-	margin-left: 0.7rem;
 }
 
-.copyright::before {
-	content: none;
-}
-
-ul.social {
-	margin: 0;
-	padding: 0;
-	margin-right: 0.2rem;
-}
-
-ul.social li {
-	margin: 0;
+ul.social { margin: 0; }
+ul.social > li {
 	display: inline-block;
-	min-width: 2.5rem;
 }
-
-ul.social li a {
-	margin: 0;
-	padding: 0.7rem 0.4rem;
+ul.social > li > a {
+	width: 3rem;
+	height: 3rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-.social svg {
-	width: auto;
+ul.social > li > a > svg {
 	height: 1.2rem;
+	width: auto;
 	fill: #555;
-
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	-o-transition: all 0.2s;
 	transition: all 0.2s;
 }
-
-.icon-soundcloud:hover svg { fill: #ff8800; }
-
-.icon-twitter:hover svg { fill: #1da1f2; }
-
-.icon-instagram:hover svg { fill: #e1306c; }
+.icon-soundcloud:hover svg, .icon-soundcloud:focus svg { fill: #ff8800; }
+.icon-twitter:hover svg, .icon-twitter:focus svg { fill: #1da1f2; }
+.icon-instagram:hover svg, .icon-instagram:focus svg { fill: #e1306c; }
 
 
-
-
-
-
-
-
-
-.err {
+label {
 	display: inline-block;
+	font-size: inherit;
+	margin: 0 0.5rem 0.5rem 0;
+	/*box-sizing: border-box;*/
+}
+
+/*input {	}*/
+
+textarea,
+select,
+input {
+	font-size: inherit;
+	padding: 0.3rem;
+	margin-bottom: 0.5rem;
+	background: #f5f5f5;
+	color: #000;
+	border: 1px solid #ddd;
+	max-width: 100%;
+	/*box-sizing: border-box;*/
+}
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	padding: 0.3rem 0.6rem;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	background: #f5f5f5;
+	color: #000;
+	border: 0;
+	cursor: pointer;
+	border: 1px solid #f5f5f5;
+	/*box-sizing: border-box;*/
+}
+a button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+	cursor: default;
+	opacity: .5;
+
+	/* Set the [X] cursor while hovering a disabled link */
+	cursor: not-allowed;
+}
+.button:focus,
+.button:enabled:hover,
+button:focus,
+button:enabled:hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+	background: #ddd;
+	border: 1px solid #ddd;
+}
+
+code,
+samp,
+kbd,
+pre {
+	font-family: Hack, "courier new", courier, andale mono, "free mono", monospace;
+	background: #f5f5f5;
+	padding: 0.1rem 0.2rem;
+	border: 1px solid #ddd;
+	font-size: 1rem;
+}
+
+kbd {
+	/* Makes the kbd element look like a keyboard key */
+	border-bottom: 3px solid #ddd;
+	/*padding: 0 0.3rem 0.15rem 0.3rem;*/
+	padding: 0.3rem;
+}
+
+pre {
+	padding: 1rem 1.2rem;
+	max-width: 100%;
+	overflow: auto;
+}
+
+pre code {
+	/* When <code> is in a <pre>, reset it's formatting to blend in */
+	background: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+code pre {
+	/* When <pre> is in a <code>, reset it's formatting to blend in */
+	display: inline;
+	background: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+code.hljs {
+	background: none;
+	/*padding: 0.9rem 1.2rem;*/
+	padding: 0;
+}
+
+hr {
+	/* Reset the border of the <hr> separator, then set a better line */
+	border: 0;
+	border-bottom: 1px solid #ddd;
+	margin: 2rem 0;
 	position: relative;
+	color: #ddd;
+	text-align: center;
 }
-.err:before {
-	content: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-	font-weight: normal;
-	color: #f66;
-	width: 100%;
+hr:after {
+	content: "\2009//\2009";
+	background: #fff;
 	position: absolute;
-	top: 0.8rem;
-	overflow: hidden;
+	top: -1rem;
+	margin-left: -0.7rem;
 }
 
+main.prose hr {
+	border-bottom: 1px solid #fff;
+	margin: 2.6rem 0;
+	color: #000;
+}
+main.prose hr:after {
+	content: " * * * ";
+	top: -0.85rem;
+	margin-left: -1.3rem;
+	font-size: 2rem;
+}
 
+/*s { text-decoration-color: #555; }*/
+
+mark {
+	padding: 0rem 0.3rem;
+	background: #ff0;
+	color: #000;
+}
 
 
 @media screen and (max-width: 38rem) {
 	html {
 		font-size: 90%;
 	}
+	body { padding: 0.8rem 1.2rem 0rem 1.2rem; }
 }
 
 
 @media screen and (max-width: 30rem) {
-	footer > nav ul li {
+	footer > nav > ul > li {
 		width: 48%;
 	}
+}
+
+
+
+/* FROM new.css but unused? */
+
+abbr:hover {
+	/* Set the '?' cursor while hovering an abbreviation */
+	cursor: help;
+}
+
+blockquote {
+	padding: 1.5rem;
+	background: #f5f5f5;
+	border-left: 0.5rem solid #ddd;
+}
+
+abbr {
+	cursor: help;
+}
+
+blockquote *:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+details {
+	/* Make the <details> look more "clickable" */
+	padding: .6rem 1rem;
+	background: #f5f5f5;
+	border: 1px solid #ddd;
+	/*border-radius: 4px;*/
+}
+
+summary {
+	/* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+	cursor: pointer;
+	font-weight: bold;
+}
+
+details[open] {
+	/* Adjust the <details> padding while open */
+	padding-bottom: .75rem;
+}
+
+details[open] summary {
+	/* Adjust the <details> padding while open */
+	margin-bottom: 6px;
+}
+
+details[open]>*:last-child {
+	/* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd::before {
+	/* Add an arrow to data table definitions */
+	content: '→ ';
+}
+
+fieldset {
+	margin-top: 1rem;
+	padding: 2rem;
+	border: 1px solid #ddd;
+	/*border-radius: 4px;*/
+}
+
+legend {
+	padding: auto .5rem;
+}
+
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 100%
+}
+
+td,
+th {
+	border: 1px solid #ddd;
+	text-align: left;
+	padding: .5rem;
+}
+
+th {
+	background: #f5f5f5;
+}
+
+tr:nth-child(even) {
+	/* Set every other cell slightly darker. Improves readability. */
+	background: #f5f5f5;
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: .5rem;
+}
+
+textarea {
+	/* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+	max-width: 100%;
+}
+
+ol,
+ul {
+	/* Replace the browser default padding */
+	padding-left: 2rem;
+	/*list-style-position: outside;*/
+}
+
+li {
+	margin-top: .4rem;
+}
+
+ul { list-style-type: "-  "; }
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-bottom: 0;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+
+/* Fonts */
+
+@font-face {
+	font-family: 'Crimson';
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;unicode-range: U+000-5FF;
+	src: local('Crimson'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Regular.woff2') format('woff2'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Regular.woff') format('woff'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Regular.ttf') format('truetype');
+
+}
+@font-face {
+	font-family: 'Crimson';
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Crimson'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Bold.woff2') format('woff2'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Bold.woff') format('woff'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Crimson';
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Crimson'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Italic.woff2') format('woff2'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Italic.woff') format('woff'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-Italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Crimson';
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Crimson'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-BoldItalic.woff2') format('woff2'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-BoldItalic.woff') format('woff'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Crimson';
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Crimson'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-SemiBold.woff2') format('woff2'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-SemiBold.woff') format('woff'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Crimson';
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Crimson'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-SemiBoldItalic.woff2') format('woff2'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-SemiBoldItalic.woff') format('woff'),
+	     url('https://cdn.cjr.is/fonts/CrimsonText-SemiBoldItalic.ttf') format('truetype');
+}
+
+/* fix for Crimson line height */
+strong {
+	position: relative;
+	vertical-align: top;
+	font-size: 1.4rem;
+	top: 0.35rem;
+}
+em {
+	position: relative;
+	vertical-align: top;
+	top: 0.25rem;
+}
+
+
+@font-face {
+	font-family: 'Hack';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-regular-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-regular-subset.woff?sha=3114f1256') format('woff');
+}
+@font-face {
+	font-family: 'Hack';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-bold-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-bold-subset.woff?sha=3114f1256') format('woff');
+}
+@font-face {
+	font-family: 'Hack';
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-italic-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-italic-webfont.woff?sha=3114f1256') format('woff');
+}
+@font-face {
+	font-family: 'Hack';
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local('Hack'), url('https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff2?sha=3114f1256') format('woff2'), url('https://cdn.cjr.is/fonts/hack-bolditalic-subset.woff?sha=3114f1256') format('woff');
 }

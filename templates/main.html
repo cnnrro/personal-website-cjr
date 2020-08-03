@@ -1,5 +1,9 @@
 {{ template "partials/header.html" . }}
 
+{{ if ne .title "" }}
+<h1 id="{{ .title | strings.Slug }}"><a href="#{{ .title | strings.Slug }}">{{ .title }}</a></h1>
+{{ end }}
+
 {{ .content }}
 
 {{ template "partials/footer.html" . }}

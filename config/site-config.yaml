@@ -1,7 +1,19 @@
 # Where you can set all the default values available to every page (overwriteable by other pages)
 
-title:
-description:
 template: "main.html" # default
 baseurl: "https://www.cjr.is/"
-cachebreaker: "2020-07-02"
+cachebreaker: "2020-08-02_4"
+
+title: ""
+meta_title: ""
+description: ""
+date: 1900-01-01
+math: false
+code: false
+og_image: ""
+og_image_alt: ""
+tags:
+  - ""
+types:
+  - ""
+
