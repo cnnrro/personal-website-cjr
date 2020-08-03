@@ -1,3 +1,4 @@
 .build/
 .direnv/
 _public/*
+drafts/*
