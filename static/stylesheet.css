@@ -647,6 +647,12 @@ em {
 	vertical-align: top;
 	top: 0.25rem;
 }
+em > strong {
+	top: .07rem;
+}
+strong > em {
+	top: 0rem;
+}
 
 
 @font-face {

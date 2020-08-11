@@ -10,7 +10,7 @@ tags:
   - essay
 types:
   - prose
-...
+---
 
 Like a train coming off the track everything seems constant. Then nothing does.
 

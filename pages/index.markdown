@@ -2,7 +2,7 @@
 meta_title: About - CJR
 title: About
 description: The personal website of Connor Robbins, script editor, and writer.
-...
+---
 
 Hello stranger, and thanks for dropping by.
 

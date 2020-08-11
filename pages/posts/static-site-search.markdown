@@ -8,7 +8,7 @@ math: false
 tags:
   - info
   - tech
-...
+---
 
 There are [plenty of ways to add search to a static site](https://gohugo.io/tools/search/):
 
@@ -20,7 +20,7 @@ And, for the lazy we have _this._
 
 ---
 
-Now, maybe one day I'll find the energy to stand up a proper search, but for the time being I've decided it'll be easier to lean on an existing search engine. **They've already done all the leg work for me**, so why not just let them to it all?
+Now, maybe one day I'll find the energy to stand up a proper search, but for the time being I've decided it'll be easier to lean on an existing search engine. **They've already done all the leg work for me**, so why not just let them do it all?
 
 What we'll do is write a little Nginx that prepends `site:cjr.is` to our reader's search query and redirects the whole thing to a _proper_ search engine--in this case DuckDuckGo.
 

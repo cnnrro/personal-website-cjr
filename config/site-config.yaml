@@ -2,7 +2,7 @@
 
 template: "main.html" # default
 baseurl: "https://www.cjr.is/"
-cachebreaker: "2020-08-02_4"
+cachebreaker: "2020-08-06"
 
 title: ""
 meta_title: ""

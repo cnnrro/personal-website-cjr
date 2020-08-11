@@ -78,7 +78,7 @@ clean:
 $(yaml): .build/yaml/%.yaml: pages/%.markdown config/site-config.yaml config/filters.lua
 	mkdir -p $(dir $@)
 	yq read config/site-config.yaml > $@
-	sed '/\.\.\./q' $< | yq read - | yq merge --inplace --overwrite $@ -
+	sed -e '2,$$s/^---$$/\.\.\./g' -e '2,$${/\.\.\./q}' $< | yq read - | yq merge --inplace --overwrite $@ -
 	yq new 'content' "`pandoc -f markdown --wrap=none --lua-filter config/filters.lua $<`" | yq merge --inplace --overwrite $@ -
 	yq new 'permalink' "`yq read $@ 'baseurl'``echo '$<' | sed -e 's/^pages\///g' -e 's/index.markdown$$//g' -e 's/.markdown$$/\//g'`" | yq merge --inplace --overwrite $@ -
 
@@ -90,7 +90,7 @@ $(list_yaml): .build/yaml/%index.yaml: pages/%_index.markdown config/site-config
 # Search pages and transform to the build path, don't search build
 	mkdir -p $(dir $@)
 	yq read config/site-config.yaml > $@
-	sed '/\.\.\./q' $< | yq read - | yq merge --inplace --overwrite $@ -
+	sed -e '2,$$s/^---$$/\.\.\./g' -e '2,${/\.\.\./q}' $< | yq read - | yq merge --inplace --overwrite $@ -
 	yq new 'content' "`pandoc --wrap=none --lua-filter config/filters.lua $<`" | yq merge --inplace --overwrite $@ -
 	yq new 'permalink' "`yq read $@ 'baseurl'``echo '$<' | sed -e 's/^pages\///g' -e 's/_index.markdown$$//g' -e 's/.markdown$$/\//g'`" | yq merge --inplace --overwrite $@ -
 	yq read $@ --tojson | jq '. + {pages:[]}' | sponge $@
